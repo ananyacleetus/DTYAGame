@@ -27,11 +27,6 @@ public class Combat : MonoBehaviour {
         return trumpIsDead;
     }
 
-    public void Punch()
-    {
-
-    }
-
 	// Use this for initialization
 	void Start () {
 		
@@ -42,6 +37,7 @@ public class Combat : MonoBehaviour {
 		if (trumpHealth <= 0)
         {
             setTrumpIsDead(true);
+            Debug.Log("Donald is dead.");
         }
 	}
 }

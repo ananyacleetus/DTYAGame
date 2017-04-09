@@ -90,8 +90,18 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
-    <Compile Include="Assets\Trump Assets\Scripts\CompletePlayerController.cs" />
-    <Compile Include="Assets\Trump Assets\Scripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\2D Platformer Controller\CameraFollow.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\2D Platformer Controller\Controller2D.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\2D Platformer Controller\PlatformController.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\2D Platformer Controller\Player.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\2D Platformer Controller\PlayerInput.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\2D Platformer Controller\RaycastController.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\Combat.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\Dash.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\NextLevelTrigger.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\Punch.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\Wall Attack.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\Wall Hitbox.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />

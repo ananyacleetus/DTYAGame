@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(Controller2D))]
 public class Dash : MonoBehaviour
 {
-
     private static bool isDashing = false;
     private static bool enemyIsHit = false;
     private static bool standingOnPlatform = false;

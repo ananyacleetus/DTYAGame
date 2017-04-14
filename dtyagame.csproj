@@ -102,6 +102,7 @@
     <Compile Include="Assets\Trump Assets\Scripts\2D Platformer Controller\Player.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\2D Platformer Controller\PlayerInput.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\2D Platformer Controller\RaycastController.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\ButtonCount.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\Combat.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\Dash.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\NextLevelTrigger.cs" />

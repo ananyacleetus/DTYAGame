@@ -48,8 +48,12 @@ public class Player : MonoBehaviour
         {
             CalculateVelocity();
             HandleWallSliding();
+            if (ButtonCount.buttonBool)
+            {
+                controller.Move(velocity * Time.deltaTime * 3f, directionalInput);
+            }
+            else controller.Move(velocity * Time.deltaTime, directionalInput);
 
-            controller.Move(velocity * Time.deltaTime, directionalInput);
 
             if (Input.GetKeyDown(KeyCode.E))
             {

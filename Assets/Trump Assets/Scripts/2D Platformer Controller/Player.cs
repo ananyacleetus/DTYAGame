@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     private float velocityXSmoothing;
 
     private Controller2D controller;
+    private Dash dash;
 
     private Vector2 directionalInput;
     private bool wallSliding;
@@ -50,7 +51,13 @@ public class Player : MonoBehaviour
 
             controller.Move(velocity * Time.deltaTime, directionalInput);
 
-            if (controller.collisions.above || controller.collisions.below)
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                controller.Move(velocity * 2f, directionalInput);
+            }
+
+
+                if (controller.collisions.above || controller.collisions.below)
             {
                 velocity.y = 0f;
             }
@@ -61,6 +68,12 @@ public class Player : MonoBehaviour
     {
         directionalInput = input;
     }
+
+    public Vector2 getDirectionalInput()
+    {
+        return this.directionalInput;
+    }
+
 
     public void OnJumpInputDown()
     {

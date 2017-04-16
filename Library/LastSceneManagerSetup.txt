@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Trump Assets/Scenes/Trump Tower.unity
-  isLoaded: 1
-  isActive: 1

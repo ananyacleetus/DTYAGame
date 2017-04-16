@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Combat : MonoBehaviour {
 
-    public int trumpHealth = 5;
-    public int trumpStamina = 5;
+    public static int trumpHealth = 5;
+    public static int trumpStamina = 5;
     private static bool trumpIsDead = false;
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -21,10 +21,19 @@ public class Combat : MonoBehaviour {
     {
         trumpIsDead = val;
     }
-
     public static bool getTrumpIsDead()
     {
         return trumpIsDead;
+    }
+
+    public static int getTrumpHealth()
+    {
+        return trumpHealth;
+    }
+
+    public static int getTrumpStamina()
+    {
+        return trumpStamina;
     }
 
 	// Use this for initialization

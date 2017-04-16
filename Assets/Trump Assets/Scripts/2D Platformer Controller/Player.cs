@@ -43,6 +43,10 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            controller.Move(Mathf.SmoothStep(0, 10, ), directionalInput);
+        }
         if (Combat.getTrumpIsDead() == false)
         {
             CalculateVelocity();

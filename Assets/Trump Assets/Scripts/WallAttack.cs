@@ -10,6 +10,7 @@ public class WallAttack : MonoBehaviour
     public float wallRiseDuration = 3f;
     private static float wallPosX, wallPosY, startTime = 0f;
     private static bool isMoving, isFading = false;
+    private static bool onCooldown = false;
     private GameObject wallClone = GameObject.Find("Wall");
 
     public static bool getIsMoving()
@@ -31,7 +32,7 @@ public class WallAttack : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) && onCooldown == false)
         {
             float playerX = GameObject.FindGameObjectWithTag("Player").transform.position.x;
             float playerY = GameObject.FindGameObjectWithTag("Player").transform.position.y;
@@ -40,7 +41,11 @@ public class WallAttack : MonoBehaviour
 
             wallClone = GameObject.Instantiate(GameObject.Find("Wall"), new Vector2(wallPosX, wallPosY), Quaternion.identity);
             startTime = Time.time;
+
+            Combat.removeTrumpStamina(3);
+            onCooldown = true;
             isMoving = true;
+
             StartCoroutine(DestroyWall());
         }
         if (isMoving)
@@ -71,5 +76,8 @@ public class WallAttack : MonoBehaviour
         yield return new WaitForSeconds(1);
         isFading = false;
         Destroy(wallClone);
+
+        yield return new WaitForSeconds(8);
+        onCooldown = false;
     }
 }

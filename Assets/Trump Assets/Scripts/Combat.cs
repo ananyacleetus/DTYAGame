@@ -31,6 +31,15 @@ public class Combat : MonoBehaviour {
         return trumpHealth;
     }
 
+    public static void removeTrumpStamina(int val)
+    {
+        trumpStamina = trumpStamina - val;
+    }
+    public static void regenTrumpStamina()
+    {
+        trumpStamina++;
+    }
+
     public static int getTrumpStamina()
     {
         return trumpStamina;

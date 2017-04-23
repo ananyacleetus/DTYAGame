@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Controller2D))]
-public class Dash : MonoBehaviour
+public class DashAttack : MonoBehaviour
 {
     private static bool isDashing = false;
     private static bool enemyIsHit = false;

@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class PlayMenuMovie : MonoBehaviour {
 
-    MovieTexture m;
-
 	// Use this for initialization
 	void Start () {
-        m = (MovieTexture)GetComponent<RawImage>().texture;
-        m.Play();
+        MovieTexture movie = GetComponent<RawImage>().texture as MovieTexture;
+        movie.Play();
+        movie.loop = true;
     }
 	
 	// Update is called once per frame

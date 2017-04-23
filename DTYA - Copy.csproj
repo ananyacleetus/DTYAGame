@@ -98,13 +98,15 @@
     <Compile Include="Assets\Trump Assets\Scripts\2D Platformer Controller\RaycastController.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\ButtonCount.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\Combat.cs" />
-    <Compile Include="Assets\Trump Assets\Scripts\Dash.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\DashAttack.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\HeartSystem.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\LevelFadeIn.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\NextLevelTrigger.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\PlayMenuMovie.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\Punch.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\StaminaSystem.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\TextFade.cs" />
+    <Compile Include="Assets\Trump Assets\Scripts\TextFadeInAndOut.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\WallAttack.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\WallDust.cs" />
     <Compile Include="Assets\Trump Assets\Scripts\WallHitbox.cs" />

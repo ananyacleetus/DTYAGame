@@ -75,11 +75,11 @@ public class StaminaSystem : MonoBehaviour {
         }
         else if (Combat.getTrumpStamina() == 0)
         {
+            stamina5.SetActive(false);
+            stamina4.SetActive(false);
             stamina3.SetActive(false);
-            stamina3.SetActive(false);
-            stamina3.SetActive(false);
-            stamina3.SetActive(false);
-            stamina3.SetActive(false);
+            stamina2.SetActive(false);
+            stamina1.SetActive(false);
         }
     }
 }

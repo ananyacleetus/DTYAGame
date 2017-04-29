@@ -33,6 +33,16 @@ public class Player : MonoBehaviour
     private bool wallSliding;
     private int wallDirX;
 
+    public float getVelocityX()
+    {
+        return velocity.x;
+    }
+
+    public float getVelocityY()
+    {
+        return velocity.y;
+    }
+
     private void Start()
     {
         controller = GetComponent<Controller2D>();

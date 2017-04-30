@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTYAGame.Plugins", "DTYAGame.Plugins.csproj", "{CA422E29-6F28-0AA3-D35B-82DE4FB05570}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTYAGame", "DTYAGame.csproj", "{A2BAA388-12CD-696D-AF2E-4747F94C81FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTYAGame.Editor", "DTYAGame.Editor.csproj", "{51C3425C-7A66-520C-CC5A-3398528D2DFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA422E29-6F28-0AA3-D35B-82DE4FB05570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA422E29-6F28-0AA3-D35B-82DE4FB05570}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA422E29-6F28-0AA3-D35B-82DE4FB05570}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA422E29-6F28-0AA3-D35B-82DE4FB05570}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2BAA388-12CD-696D-AF2E-4747F94C81FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2BAA388-12CD-696D-AF2E-4747F94C81FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2BAA388-12CD-696D-AF2E-4747F94C81FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2BAA388-12CD-696D-AF2E-4747F94C81FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51C3425C-7A66-520C-CC5A-3398528D2DFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C3425C-7A66-520C-CC5A-3398528D2DFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C3425C-7A66-520C-CC5A-3398528D2DFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C3425C-7A66-520C-CC5A-3398528D2DFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

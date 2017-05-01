@@ -7,8 +7,6 @@ public class Punch : MonoBehaviour {
     private static bool enemyIsHit = false;
     private static int hitCount = 0;
     private static int missCount = 0;
-    GameObject tile0;
-    Rigidbody2D theRigidBody;
 
     public static bool getEnemyIsHit()
     {
@@ -37,8 +35,7 @@ public class Punch : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        tile0 = GameObject.Find("tile0");
-        theRigidBody = tile0.GetComponent<Rigidbody2D>();
+		
 	}
 	
 	// Update is called once per frame
@@ -46,7 +43,6 @@ public class Punch : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Q) && getEnemyIsHit() == true)
         {
             hitCount++;
-            theRigidBody.AddForce(Vector3.right * 10 * Time.deltaTime);
             Debug.Log(hitCount + " punches landed!");
         }
         else if (Input.GetKeyDown(KeyCode.Q) && getEnemyIsHit() == false)

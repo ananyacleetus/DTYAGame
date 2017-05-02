@@ -18,7 +18,9 @@ public class PlayerAnimation : MonoBehaviour {
         bool isArrowKeyPressed = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow);
         bool isKeyPressed = Input.anyKey;
         bool isJumping = player.GetComponent<Controller2D>().collisions.below == false;
+        bool isPunching = Input.GetKey(KeyCode.Q);
         anim.SetBool("isJumping", isJumping);
+        anim.SetBool("isPunching", isPunching);
         anim.SetBool("isRunning", isArrowKeyPressed && !isJumping);
         anim.SetBool("isIdling", !isKeyPressed && !isJumping);
         if (player.GetComponent<Player>().getVelocityX() < 0)

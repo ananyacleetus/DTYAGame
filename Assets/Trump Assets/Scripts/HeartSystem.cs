@@ -12,25 +12,25 @@ public class HeartSystem : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Combat.getTrumpHealth() == 4)
+		if (Combat.getTrumpHealth () == 4) 
+		{
+			Destroy(GameObject.Find ("Red Heart 5"));
+		}
+        if (Combat.getTrumpHealth() == 3)
         {
-            GameObject.Find("Red Heart 5").SetActive(false);
+			Destroy(GameObject.Find ("Red Heart 4"));
         }
-        else if (Combat.getTrumpHealth() == 3)
+        if (Combat.getTrumpHealth() == 2)
         {
-            GameObject.Find("Red Heart 4").SetActive(false);
+			Destroy(GameObject.Find ("Red Heart 3"));
         }
-        else if (Combat.getTrumpHealth() == 2)
+        if (Combat.getTrumpHealth() == 1)
         {
-            GameObject.Find("Red Heart 3").SetActive(false);
+			Destroy(GameObject.Find ("Red Heart 2"));
         }
-        else if (Combat.getTrumpHealth() == 1)
+        if (Combat.getTrumpHealth() == 0)
         {
-            GameObject.Find("Red Heart 2").SetActive(false);
-        }
-        else if (Combat.getTrumpHealth() == 0)
-        {
-            GameObject.Find("Red Heart 1").SetActive(false);
+			Destroy(GameObject.Find ("Red Heart 1"));
         }
     }
 }

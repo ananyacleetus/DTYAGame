@@ -5,6 +5,7 @@ using UnityEngine;
 public class Punch : MonoBehaviour {
 
     private static bool enemyIsHit = false;
+    GameObject enemyHit;
     private static int hitCount = 0;
     private static int missCount = 0;
 
@@ -22,6 +23,7 @@ public class Punch : MonoBehaviour {
         if (collision.gameObject.tag == "Enemy")
         {
             setEnemyIsHit(true);
+            enemyHit = collision.gameObject;
         }
     }
 
@@ -42,6 +44,7 @@ public class Punch : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Q) && getEnemyIsHit() == true)
         {
+            enemyHit.GetComponent<EnemyHealth>().enemyHit();
             hitCount++;
             Debug.Log(hitCount + " punches landed!");
         }

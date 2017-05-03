@@ -13,10 +13,10 @@ public class IntroTextFadeIn : MonoBehaviour {
     {
         yield return new WaitForSeconds(2);
         location.GetComponent<Text>().CrossFadeAlpha(255, 3, false);
-        yield return new WaitForSeconds(4);
-        location.GetComponent<Text>().CrossFadeAlpha(0, 3, false);
-        date.GetComponent<Text>().CrossFadeAlpha(0, 3, false);
-        blackSprite.GetComponent<Image>().CrossFadeAlpha(0, 3, false);
+        yield return new WaitForSeconds(3);
+        location.GetComponent<Text>().CrossFadeAlpha(0, 1, false);
+        date.GetComponent<Text>().CrossFadeAlpha(0, 1, false);
+        blackSprite.GetComponent<Image>().CrossFadeAlpha(0, 1, false);
     }
 
     // Use this for initialization

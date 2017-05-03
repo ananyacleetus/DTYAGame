@@ -50,6 +50,7 @@ public class DialogueTrigger : MonoBehaviour {
             rpgTalk.lineToStart = 0;
             rpgTalk.lineToBreak = 6;
             rpgTalk.NewTalk();
+            GameObject.Find("Enemy Approaching").GetComponent<AudioSource>().Stop();
             battleAgainstHero.GetComponent<AudioSource>().Play();
             count++;
         }

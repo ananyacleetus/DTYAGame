@@ -795,6 +795,7 @@ GameObject:
   - component: {fileID: 2014382702}
   - component: {fileID: 2014382704}
   - component: {fileID: 2014382705}
+  - component: {fileID: 2014382706}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -874,6 +875,17 @@ MonoBehaviour:
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
 --- !u!114 &2014382705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014382700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0395220c48676ce448fe086ff28df951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2014382706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}

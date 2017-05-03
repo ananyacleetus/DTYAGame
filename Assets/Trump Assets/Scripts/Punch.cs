@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class Punch : MonoBehaviour {
 
-    private static bool enemyIsHit = false;
+    private static bool enemyIsInHitbox = false;
     GameObject enemyHit;
     private static int hitCount = 0;
     private static int missCount = 0;
 
-    public static bool getEnemyIsHit()
+    public static bool getEnemyIsInHitbox()
     {
-        return enemyIsHit;
+        return enemyIsInHitbox;
     }
     public static void setEnemyIsHit(bool val)
     {
-        enemyIsHit = val;
+        enemyIsInHitbox = val;
     }
      
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            setEnemyIsHit(true);
+            enemyIsInHitbox = true;
             enemyHit = collision.gameObject;
         }
     }
@@ -31,24 +31,23 @@ public class Punch : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            setEnemyIsHit(false);
+            enemyIsInHitbox = false;
         }
     }
 
     // Use this for initialization
     void Start () {
-		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Q) && getEnemyIsHit() == true)
+        if (Input.GetKeyDown(KeyCode.Q) && enemyIsInHitbox == true)
         {
             enemyHit.GetComponent<EnemyHealth>().enemyHit();
             hitCount++;
             Debug.Log(hitCount + " punches landed!");
         }
-        else if (Input.GetKeyDown(KeyCode.Q) && getEnemyIsHit() == false)
+        else if (Input.GetKeyDown(KeyCode.Q) && enemyIsInHitbox == false)
         {
             missCount++;
             Debug.Log(missCount + " punches missed!");

@@ -6,6 +6,8 @@ public class EnemyAnimation : MonoBehaviour {
 
     Animator anim;
     GameObject cruz;
+    bool isRunning = false;
+    bool isIdling = false;
 
 	// Use this for initialization
 	void Start () {
@@ -15,13 +17,24 @@ public class EnemyAnimation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (cruz.GetComponent<Player>().getVelocityX() < 0)
+        if (cruz.GetComponent<EnemyAIBasics>().getVelocityX() < -0.25)
         {
             cruz.GetComponent<SpriteRenderer>().flipX = true;
+            isRunning = true;
+            isIdling = false;
+        }
+        else if (cruz.GetComponent<EnemyAIBasics>().getVelocityX() > 0.25)
+        {
+            cruz.GetComponent<SpriteRenderer>().flipX = false;
+            isRunning = true;
+            isIdling = false;
         }
         else
         {
-            cruz.GetComponent<SpriteRenderer>().flipX = false;
+            isIdling = true;
+            isRunning = false;
         }
+        anim.SetBool("isIdling", isIdling);
+        anim.SetBool("isRunning", isRunning);
     }
 }
